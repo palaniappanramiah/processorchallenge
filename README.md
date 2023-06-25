@@ -13,11 +13,16 @@ calculation of the associated points with the receipt and fetch the points with 
 * Docker(To execute the program without any dependency of other setup)
 
 ## Project Architecture
-src/main/java/com/fetch/rewards/receipt/processorchallenge/ProcessorChallengeApplication.java - Spring Boot App for bootstrapping and launching the application
-src/main/java/com/fetch/rewards/receipt/processorchallenge/contoller/ReceiptController.java - Control layer defining the API
-src/main/java/com/fetch/rewards/receipt/processorchallenge/model - Data model layer with Receipt and Item classes
-src/main/java/com/fetch/rewards/receipt/processorchallenge/service/ReceiptService.java - Service layer for calculating the points
-src/test/java/com/fetch/rewards/receipt/processorchallenge/ProcessorchallengeApplicationTests.java - Unit tests with tests for control and service layers
+* src/main/java/com/fetch/rewards/receipt/processorchallenge/ProcessorChallengeApplication.java
+  - Spring Boot App for bootstrapping and launching the application
+* src/main/java/com/fetch/rewards/receipt/processorchallenge/contoller/ReceiptController.java
+  - Control layer defining the API
+* src/main/java/com/fetch/rewards/receipt/processorchallenge/model
+  - Data model layer with Receipt and Item classes
+* src/main/java/com/fetch/rewards/receipt/processorchallenge/service/ReceiptService.java
+  - Service layer for calculating the points
+* src/test/java/com/fetch/rewards/receipt/processorchallenge/ProcessorchallengeApplicationTests.java
+  - Unit tests with tests for control and service layers
 
 ## Summary of API Specification
 ### Endpoint: Process Receipts
@@ -49,7 +54,7 @@ Example Response:
 { "points": 32 }
 ```
 
-## How to Build & Run
+## Build & Run
 1. Install Docker, if not already installed.
 2. Clone the repository as the below command in the terminal:
 ```
@@ -70,7 +75,7 @@ docker run -p 8080:8080 processorchallenge
 
 Alternatively, this can be built and run using Maven
 
-## How to Test
+## Test
 1. Open a new terminal and navigate into the project directory:
 ```
 cd processorchallenge
@@ -113,7 +118,7 @@ curl -X GET http://localhost:8080/receipts/{id}/points
 
 Alternatively, this can be tested using Postman
 
-## How to Run the Unit Test
+## Run the Unit Test
 
 1. Make sure Maven is installed locally
 2. Run this in the terminal within the 'processorchallenge' directory:
