@@ -1,11 +1,9 @@
 # Receipt Processor
----
 This is a RESTful API app developed with the below two functionalities: 
 processing of receipts with the given receipt and by generating a receipt ID.
 calculation of the associated points with the receipt and fetch the points with the given receipt ID.
 
 ## Technologies Used
----
 * Java 17
 * Junit 5.9.3 and mockito
 * Spring Boot 3.1.1
@@ -15,7 +13,6 @@ calculation of the associated points with the receipt and fetch the points with 
 * Docker(To execute the program without any dependency of other setup)
 
 ## Project Architecture
----
 src/main/java/com/fetch/rewards/receipt/processorchallenge/ProcessorChallengeApplication.java - Spring Boot App for bootstrapping and launching the application
 src/main/java/com/fetch/rewards/receipt/processorchallenge/contoller/ReceiptController.java - Control layer defining the API
 src/main/java/com/fetch/rewards/receipt/processorchallenge/model - Data model layer with Receipt and Item classes
@@ -23,7 +20,6 @@ src/main/java/com/fetch/rewards/receipt/processorchallenge/service/ReceiptServic
 src/test/java/com/fetch/rewards/receipt/processorchallenge/ProcessorchallengeApplicationTests.java - Unit tests with tests for control and service layers
 
 ## Summary of API Specification
----
 ### Endpoint: Process Receipts
 * Path: `/receipts/process`
 * Method: `POST`
@@ -52,12 +48,10 @@ Example Response:
 ```json
 { "points": 32 }
 ```
-----
 
-How to Build & Run
----
-1. Install Docker if not already installed
-2. Clone the repository as the below command:
+## How to Build & Run
+1. Install Docker, if not already installed.
+2. Clone the repository as the below command in the terminal:
 ```
 git clone https://github.com/palaniappanramiah/processorchallenge.git
 ```
@@ -69,7 +63,7 @@ cd processorchallenge
 ```
 docker build -t processorchallenge .
 ```
-5. Run the docker container:
+5. Run the docker container by the following command and leave the terminal open:
 ```
 docker run -p 8080:8080 processorchallenge
 ```
@@ -77,8 +71,11 @@ docker run -p 8080:8080 processorchallenge
 Alternatively, this can be built and run using Maven
 
 ## How to Test
----
-1. Run this in the terminal within the 'processorchallenge' directory:
+1. Open a new terminal and navigate into the project directory:
+```
+cd processorchallenge
+```
+2. Run this in the terminal within the 'processorchallenge' directory:
 ```
 curl -X POST -H "Content-Type: application/json" -d '{
   "retailer": "Target",
@@ -105,19 +102,19 @@ curl -X POST -H "Content-Type: application/json" -d '{
   "total": "35.35"
 }' http://localhost:8080/receipts/process
 ```
-2. This will return an 'id' in the terminal, copy that id and replace {id} in the following command:
+3. This will return an 'id' in the terminal, copy that id and replace {id} in the following command:
 ```
 curl -X GET http://localhost:8080/receipts/{id}/points
 ```
-3. This will return
+4. This should return
 ```
 { "points": 28 }
 ```
 
 Alternatively, this can be tested using Postman
 
-## How to Run the  Test
----
+## How to Run the Unit Test
+
 1. Make sure Maven is installed locally
 2. Run this in the terminal within the 'processorchallenge' directory:
 ```
