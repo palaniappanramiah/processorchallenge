@@ -1,7 +1,7 @@
 # Receipt Processor
 This is a RESTful API app developed with the below two functionalities: 
-processing of receipts with the given receipt and by generating a receipt ID.
-calculation of the associated points with the receipt and fetch the points with the given receipt ID.
+* processing of receipts with the given receipt and by generating a receipt ID.
+* calculation of the associated points with the receipt and fetch the points with the given receipt ID.
 
 ## Technologies Used
 * Java 17
