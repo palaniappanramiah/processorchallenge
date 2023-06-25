@@ -46,7 +46,6 @@ public class ReceiptService {
             if (item.getShortDescription().trim().length() % 3 == 0)
                 totalPoints += Math.max((long) Math.ceil((Double.parseDouble(item.getPrice())) * 0.2), 1);
 
-
         // 6 points if the day in the purchase date is odd.
         if (purchaseDate.getDate() % 2 == 1)
             totalPoints += 6;

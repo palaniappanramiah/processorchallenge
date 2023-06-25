@@ -32,6 +32,7 @@ class ProcessorchallengeApplicationTests {
 	@BeforeEach
 	public void setUp() {
 		MockitoAnnotations.openMocks(this);
+		receiptService = new ReceiptService();
 		receiptController = new ReceiptController(receiptService);
 	}
 
